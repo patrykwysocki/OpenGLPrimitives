@@ -50,6 +50,8 @@ void Game::initialize()
 	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
+	
+
 	gluPerspective(45.0, window.getSize().x / window.getSize().y, 1.0, 500.0);
 	glMatrixMode(GL_MODELVIEW);
 
@@ -128,9 +130,12 @@ void Game::draw()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	//Investigate Here!!!!!
-	glRotatef(rotationAngle, 0.0f, 0.0f, 1.0f);
 	glTranslatef(1.0f, 0.0f, 0.0f);
 	glScalef(1.0f, 1.0f, 1.0f);
+	glRotatef(rotationAngle, 0.0f, 0.0f, 1.0f);
+
+	//moves triangles to the right
+
 	cout << "Drawing Primative " << current << endl;
 	glCallList(current);
 	// // Uncomment for Part 2
