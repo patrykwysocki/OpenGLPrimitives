@@ -23,7 +23,7 @@ private:
 
 	// // Uncomment for Part 2
 	// // ********************
-	 const int primatives;
+	const int primatives;
 
 	GLuint index;
 	Clock clock;
